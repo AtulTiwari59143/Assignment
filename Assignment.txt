@@ -1,0 +1,579 @@
+The GIT commands are shown below :
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git --version
+git version 2.27.0.windows.1
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git config --edit --global
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code ATUL.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+ATUL.md  index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ATUL.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code Assignment.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+Assignment.txt  ATUL.md  index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ATUL.md
+        Assignment.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ gite add .
+bash: gite: command not found
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ATUL.md
+        new file:   Assignment.txt
+
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git commit -m "Add two new files atul and assignment"
+[master 09b2f3e] Add two new files atul and assignment
+ 2 files changed, 4 insertions(+)
+ create mode 100644 ATUL.md
+ create mode 100644 Assignment.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ cd ATUL.md
+bash: cd: ATUL.md: Not a directory
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code ATUL.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add ATUL.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   ATUL.md
+
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git commit -m "Modify ATULmd file by adding tag"
+[master d78bb19] Modify ATULmd file by adding tag
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git log
+commit d78bb19f74bfc30cf7e21d0bc4a99f7209d14490 (HEAD -> master)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 22:30:32 2020 +0530
+
+    Modify ATULmd file by adding tag
+
+commit 09b2f3e07823ca75e3e59423d18143e3b95121b6
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 22:22:17 2020 +0530
+
+    Add two new files atul and assignment
+
+commit aa612e793b61a106a05317117403e19b447759d9 (test-branch)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 16:42:11 2020 +0530
+
+    Add new line
+
+commit 23d7b9fe673ef234457c67e14ee1a3d9f2718263 (origin/master, feature)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 14:32:08 2020 +0530
+
+    Add index.html file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git log --oneline
+d78bb19 (HEAD -> master) Modify ATULmd file by adding tag
+09b2f3e Add two new files atul and assignment
+aa612e7 (test-branch) Add new line
+23d7b9f (origin/master, feature) Add index.html file
+f51f32c Created README.md file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       ATUL.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ATUL.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git log
+commit 09b2f3e07823ca75e3e59423d18143e3b95121b6 (HEAD -> master)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 22:22:17 2020 +0530
+
+    Add two new files atul and assignment
+
+commit aa612e793b61a106a05317117403e19b447759d9 (test-branch)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 16:42:11 2020 +0530
+
+    Add new line
+
+commit 23d7b9fe673ef234457c67e14ee1a3d9f2718263 (origin/master, feature)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 14:32:08 2020 +0530
+
+    Add index.html file
+
+commit f51f32c01a2fc6522711b40a603c02f02880e8fe
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 14:16:32 2020 +0530
+
+    Created README.md file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git reset --hard HEAD~1
+HEAD is now at aa612e7 Add new line
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code ATUL.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git log
+commit aa612e793b61a106a05317117403e19b447759d9 (HEAD -> master, test-branch)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 16:42:11 2020 +0530
+
+    Add new line
+
+commit 23d7b9fe673ef234457c67e14ee1a3d9f2718263 (origin/master, feature)
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 14:32:08 2020 +0530
+
+    Add index.html file
+
+commit f51f32c01a2fc6522711b40a603c02f02880e8fe
+Author: Atul Tiwari <atul.tiwari1@zensar.com>
+Date:   Tue Jul 14 14:16:32 2020 +0530
+
+    Created README.md file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git reflog
+aa612e7 (HEAD -> master, test-branch) HEAD@{0}: reset: moving to HEAD~1
+09b2f3e HEAD@{1}: reset: moving to HEAD~1
+d78bb19 HEAD@{2}: commit: Modify ATULmd file by adding tag
+09b2f3e HEAD@{3}: commit: Add two new files atul and assignment
+aa612e7 (HEAD -> master, test-branch) HEAD@{4}: checkout: moving from feature to master
+23d7b9f (origin/master, feature) HEAD@{5}: checkout: moving from master to feature
+aa612e7 (HEAD -> master, test-branch) HEAD@{6}: merge test-branch: Fast-forward
+23d7b9f (origin/master, feature) HEAD@{7}: checkout: moving from test-branch to master
+aa612e7 (HEAD -> master, test-branch) HEAD@{8}: commit: Add new line
+23d7b9f (origin/master, feature) HEAD@{9}: checkout: moving from master to test-branch
+23d7b9f (origin/master, feature) HEAD@{10}: checkout: moving from feature to master
+23d7b9f (origin/master, feature) HEAD@{11}: checkout: moving from master to feature
+23d7b9f (origin/master, feature) HEAD@{12}: checkout: moving from feature to master
+23d7b9f (origin/master, feature) HEAD@{13}: checkout: moving from master to feature
+23d7b9f (origin/master, feature) HEAD@{14}: commit: Add index.html file
+f51f32c HEAD@{15}: commit (initial): Created README.md file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code index1.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+ATUL.md  index.html  index1.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code Assignment.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add index1.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index1.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ATUL.md
+
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git commit -m "Add index1.html file"
+[master c490c17] Add index1.html file
+ 2 files changed, 15 insertions(+)
+ create mode 100644 ATUL.md
+ create mode 100644 index1.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+ATUL.md  index.html  index1.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code Assignment.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Assignment.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git commit -m "Add Assignment.txt file"
+[master 6937d17] Add Assignment.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Assignment.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+Assignment.txt  ATUL.md  index.html  index1.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ ls
+index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git checkout -b feature
+fatal: A branch named 'feature' already exists.
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git checkout -b text2
+Switched to a new branch 'text2'
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ ls
+index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git chectout master
+git: 'chectout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git checkout master
+Switched to branch 'master'
+D       ATUL.md
+D       Assignment.txt
+D       index1.html
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git branch
+  feature
+* master
+  test-branch
+  text2
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git checkout text2
+Switched to branch 'text2'
+D       ATUL.md
+D       Assignment.txt
+D       index1.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git branch
+  feature
+  master
+  test-branch
+* text2
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ ls
+index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ code index.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git status
+On branch text2
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ATUL.md
+        deleted:    Assignment.txt
+        modified:   index.html
+        deleted:    index1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git commit -m "Add new table in index.html"
+[text2 7cdeaa6] Add new table in index.html
+ 4 files changed, 4 insertions(+), 16 deletions(-)
+ delete mode 100644 ATUL.md
+ delete mode 100644 Assignment.txt
+ delete mode 100644 index1.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git status
+On branch text2
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (text2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git merge text2
+Updating 6937d17..7cdeaa6
+Fast-forward
+ ATUL.md        |  0
+ Assignment.txt |  1 -
+ index.html     |  4 ++++
+ index1.html    | 15 ---------------
+ 4 files changed, 4 insertions(+), 16 deletions(-)
+ delete mode 100644 ATUL.md
+ delete mode 100644 Assignment.txt
+ delete mode 100644 index1.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code index.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git branch
+  feature
+* master
+  test-branch
+  text2
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ ls
+index.html  README.md
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ code index.html
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ code index.css
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git commit -m "Add a new css file"
+[feature 2526b72] Add a new css file
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.css
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ code file1.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git commit -m "Create file1.txt in master"
+[master 4254a6f] Create file1.txt in master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ code index.css
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git add .
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git commit -m "Add class selector in feature branch"
+[feature 7b59676] Add class selector in feature branch
+ 1 file changed, 4 insertions(+)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git merge feature
+Merge made by the 'recursive' strategy.
+ index.css | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 index.css
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git log --oneline
+7c8512d (HEAD -> master) Merge branch 'feature'
+7b59676 (feature) Add class selector in feature branch
+4254a6f Create file1.txt in master
+2526b72 Add a new css file
+7cdeaa6 (text2) Add new table in index.html
+6937d17 Add Assignment.txt file
+c490c17 Add index1.html file
+aa612e7 (test-branch) Add new line
+23d7b9f (origin/master) Add index.html file
+f51f32c Created README.md file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$ git log --oneline --graph --decorate
+*   7c8512d (HEAD -> master) Merge branch 'feature'
+|\
+| * 7b59676 (feature) Add class selector in feature branch
+| * 2526b72 Add a new css file
+* | 4254a6f Create file1.txt in master
+* | 7cdeaa6 (text2) Add new table in index.html
+* | 6937d17 Add Assignment.txt file
+* | c490c17 Add index1.html file
+* | aa612e7 (test-branch) Add new line
+|/
+* 23d7b9f (origin/master) Add index.html file
+* f51f32c Created README.md file
+
+ATUL@LAPTOP-0NLNHNBF MINGW64 /d/DotNET Training/DAY1 GIT (master)
+$
